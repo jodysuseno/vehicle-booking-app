@@ -22,7 +22,8 @@ Password : jafar123
 
 PHP v8.1.2\
 MariaDB v10.4.22\
-Framework Laravel 9
+Framework Laravel 9\
+Vali Admin template Bootstap 4
 
 ### Panduan
 
@@ -40,7 +41,7 @@ Login sebagain admin\
 - Report->Booking Periodic:
     - digunakan untuk melihat laporan tentang periodik pemesanan kendaraan
 
-Loginn sebagai approval\
+Loginn sebagai approval
 - Menu dashboard
     - terdapat grafik pemesanan kendaraan
 - Vehicle Usage->booking :
@@ -52,4 +53,8 @@ Loginn sebagai approval\
 
 Semoga saya bisa lolos untuk tes teknis ini. amin
 
+### physical data model
+![physical data model](https://user-images.githubusercontent.com/57146181/154781693-a91a32e2-a51e-4edb-add9-b9c4c2627aff.png)
 
+### activity diagram
+![activity diagram](https://user-images.githubusercontent.com/57146181/154781723-bf835005-36e4-43ee-b2db-27dacb2e3f7e.png)
