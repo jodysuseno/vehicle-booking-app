@@ -41,7 +41,7 @@
                   <td>{{ $vehicle->ownership }}</td>
                   <td>{{ $vehicle->years }}</td>
                   <td>
-                    <a href="/vehicle/{{ $vehicle->id }}/edit" class="btn btn-info btn-xs"><i class="icon fa fa-edit"></i> Update</a>
+                    <a href="{{ route('vehicle.edit', $vehicle->id) }}" class="btn btn-info btn-xs"><i class="icon fa fa-edit"></i> Update</a>
                     {{-- <a href="" class="btn btn-danger btn-xs"><i class="icon fa fa-trash"></i> Delete</a> --}}
                     <form class="d-inline" action="{{ route('vehicle.destroy',$vehicle->id) }}" 
                       method="POST" onsubmit="return confirm('Are you sure to delete the data?')">

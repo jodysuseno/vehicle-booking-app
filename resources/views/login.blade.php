@@ -21,7 +21,7 @@
       <div class="login-box">
         <form class="login-form" method="POST" action="/loginpost">
           {{ @csrf_field() }}
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Login</h3>
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Vehicle Booking</h3>
           @if ($message = Session::get('danger'))
           <div class="form-group">
             <div class="alert alert-danger">
