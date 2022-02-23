@@ -14,7 +14,8 @@ Password : jafar123
 ### Instalasi
 
 - Clone repository
-- buat database vehicle pada database
+- masuk folder project "cd vehicle-booking-app"
+- buat database dengan nama vehicle pada database mysql
 - lakukan migrate dan seeding dengan masuk ke directory project dan mengetikan "php artisan migrate --seed"
 - lalu jalankan laravel dengan mengetikan "php artisan serve"
 
