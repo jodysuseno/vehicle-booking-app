@@ -50,8 +50,6 @@ Loginn sebagai approval
 - Report->Booking Periodic:
     - digunakan untuk melihat laporan tentang periodik pemesanan kendaraan
 
-** note : untuk featrue export excel masih belum bisa karena project ini masih terkendala tidak bisa terinstall dan error pada package library Excel laravel. untuk sementara dibuat menjadi download menjadi file .csv.\
-
 Semoga saya bisa lolos untuk tes teknis ini. amin
 
 ### physical data model

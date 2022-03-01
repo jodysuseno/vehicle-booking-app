@@ -31,15 +31,28 @@ Route::middleware(['guest'])->group(function () {
 
 Route::group(['middleware' => ['level:admin,approver', 'auth']], function () {
     Route::get('/', [DashboardController::class, 'dashboard']);
-    Route::resource('/user', UserController::class);
-    Route::resource('/vehicle', VehicleController::class);
-    Route::resource('/driver', DriverController::class);
+    // Route::resource('/user', UserController::class);
+    // Route::resource('/vehicle', VehicleController::class);
+    // Route::resource('/driver', DriverController::class);
     Route::resource('/booking', BookingController::class);
     Route::patch('/booking/{id}/approve', [BookingController::class, 'approve']);
     Route::patch('/booking/{id}/reject', [BookingController::class, 'reject']);
     Route::patch('/booking/{id}/done', [BookingController::class, 'done']);
     Route::get('/report', [BookingController::class, 'report']);
     Route::get('/export', [BookingController::class, 'export']);
+});
+
+Route::group(['middleware' => ['level:admin', 'auth']], function () {
+    // Route::get('/', [DashboardController::class, 'dashboard']);
+    Route::resource('/user', UserController::class);
+    Route::resource('/vehicle', VehicleController::class);
+    Route::resource('/driver', DriverController::class);
+    // Route::resource('/booking', BookingController::class);
+    // Route::patch('/booking/{id}/approve', [BookingController::class, 'approve']);
+    // Route::patch('/booking/{id}/reject', [BookingController::class, 'reject']);
+    // Route::patch('/booking/{id}/done', [BookingController::class, 'done']);
+    // Route::get('/report', [BookingController::class, 'report']);
+    // Route::get('/export', [BookingController::class, 'export']);
 });
 
 Route::get('/logout', [LoginController::class, 'logout']);

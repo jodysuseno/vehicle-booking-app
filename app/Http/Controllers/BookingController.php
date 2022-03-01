@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\BookingsExport;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
 // use Response;
@@ -127,18 +129,20 @@ class BookingController extends Controller
 
     public function export(){
 
-        $bookings = Booking::all();
+        return Excel::download(new BookingsExport, 'bookings.xlsx');
+        // return Excel::download(new UsersExport, 'users.xlsx');
+        // $bookings = Booking::all();
 
-        $handle = fopen('export.csv', 'w');
+        // $handle = fopen('export.csv', 'w');
 
-        foreach ($bookings as $row) {
-            fputcsv($handle, $row->toArray(), ';');
-        }
+        // foreach ($bookings as $row) {
+        //     fputcsv($handle, $row->toArray(), ';');
+        // }
 
-        fclose($handle);
+        // fclose($handle);
 
-        $filepath = public_path('export.csv');
-        return Response::download($filepath);
-        return redirect()->route('booking.index')->with('status', 'Data has ben downloaded');
+        // $filepath = public_path('export.csv');
+        // return Response::download($filepath);
+        // return redirect()->route('booking.index')->with('status', 'Data has ben downloaded');
     }
 }
